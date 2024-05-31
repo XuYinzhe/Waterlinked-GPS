@@ -65,11 +65,11 @@ def main():
     parser = argparse.ArgumentParser(description="Fetch and save position data concurrently.")
     parser.add_argument("-u", "--url", help="Base URL to use", type=str, default="https://demo.waterlinked.com")
     parser.add_argument("-s", "--save", help="Save directory", type=str, default="save")
-    parser.add_argument("-n", "--notsave", help="Don't save the recording", action="store_true")
+    # parser.add_argument("-n", "--notsave", help="Don't save the recording", action="store_true")
     args = parser.parse_args()
 
-    if args.notsave:
-        return
+    # if args.notsave:
+    #     return
 
     save_path = os.path.join(args.save, datetime.datetime.now().strftime("%m%d%H%M"))
     os.makedirs(save_path, exist_ok=True)
